@@ -37,7 +37,7 @@ public class BookShow extends HttpServlet {
       List<Book> list = bsi.showBooks();
       System.out.println("checking jenkins");
       RequestDispatcher view = null;
-      request.setAttribute("res", list);
+      request.setAttribute("res",list);
       
       view = request.getRequestDispatcher("bookList.jsp");
       view.include(request, response);    
