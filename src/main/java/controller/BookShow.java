@@ -35,7 +35,6 @@ public class BookShow extends HttpServlet {
     	 BookInterfaceDAO dao = BookFactory.getBookQueryDAO();
       BookServiceInterface bsi = BookFactory.getBookServiceImplemantation(dao);
       List<Book> list = bsi.showBooks();
-      System.out.println("checking jenkins update");
       RequestDispatcher view = null;
       request.setAttribute("res",list);
       
