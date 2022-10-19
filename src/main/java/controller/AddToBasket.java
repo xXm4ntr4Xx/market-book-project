@@ -53,10 +53,8 @@ throws ServletException, IOException {
 		//redirect to login if email is null
 		response.sendRedirect("http://localhost:8080/market-book/Login.jsp");
 		}else {
-			basket = bsi.searchBooksAndInsertOnBasket(id);	
+			basket = bsi.searchBooksAndInsertOnBasket(id,emailSession);	
 			
-			
-			System.out.println(basket + "   "+ emailSession);
  		request.setAttribute("basket",basket);
  		view = request.getRequestDispatcher("BookShow?");
  		view.include(request, response); 

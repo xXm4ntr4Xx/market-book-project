@@ -62,19 +62,24 @@
 	<table border="1"
 		class="flex justify-center table-auto border-separate border-spacing-2 border border-slate-500 ">
 		<tr>
-		<th class="border border-slate-600">Book id</th>
-			<th class="border border-slate-600">Book title</th>
-			<th class="border border-slate-600">Book cost</th>
+		<!-- <th class="border border-slate-600">Book id</th> -->
+			<th class="border border-slate-600">Book Title</th>
+			<th class="border border-slate-600">Book Author</th>
+			<th class="border border-slate-600">Book Year</th>
+			<th class="border border-slate-600">Book Cost</th>
 			<th class="border border-slate-600">Delete</th>
 		</tr>
 		<tr>
 			<c:forEach items="${basket}" var="book">
 				<tr>
 					<td class="border border-slate-700">
-					<c:out value="${book.bookId}" />
+					<c:out value="${book.bookTitle}" />
 					</td>
 					<td class="border border-slate-700">
-					<c:out value="${book.bookTitle}" />
+					<c:out value="${book.bookAuthor}" />
+					</td>
+					<td class="border border-slate-700">
+					<c:out value="${book.bookYear}" />
 					</td>
 					<td class="border border-slate-700">
 					<c:out value="${book.bookCost}" />

@@ -28,11 +28,11 @@ public class SearchBook extends HttpServlet {
     }
 
 	
-	protected void doPost(
+	protected void doGet(
 		HttpServletRequest request, 
 		HttpServletResponse response) 
 	throws ServletException, IOException {
-		var num = request.getParameter("id");
+	var num = request.getParameter("id");
 		BookInterfaceDAO dao = BookFactory.getBookQueryDAO();
   BookServiceInterface bsi = BookFactory.getBookServiceImplemantation(dao);
   List<Book> list = bsi.searchBooks(num);

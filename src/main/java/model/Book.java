@@ -6,6 +6,7 @@ public class Book {
 	private String bookAuthor; 	
 	private Integer bookYear;
 	private Double bookCost;
+	private String userEmail;
 	
 	//Constructor
 	
@@ -33,6 +34,18 @@ public class Book {
 		this.bookYear = bookYear;
 		this.bookCost = bookCost;
 	}
+	
+	
+	public Book(Integer bookId, String bookTitle, String bookAuthor, Integer bookYear, Double bookCost, String userEmail) {
+		super();
+		this.bookId = bookId;
+		this.bookTitle = bookTitle;
+		this.bookAuthor = bookAuthor;
+		this.bookYear = bookYear;
+		this.bookCost = bookCost;
+		this.userEmail = userEmail;
+	}
+
 	//Getters
 	public Integer getBookId() {
 		return bookId;
@@ -49,6 +62,15 @@ public class Book {
 	public Double getBookCost() {
 		return bookCost;
 	}
+	
+	public String getUserEmail() {
+		return userEmail;
+	}
+
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
+	}
+
 	//Setters
 	public void setBookId(Integer bookId) {
 		this.bookId = bookId;

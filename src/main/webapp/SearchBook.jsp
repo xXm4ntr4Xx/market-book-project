@@ -59,7 +59,7 @@
 	<!--  -->
 	
 	<div class="flex justify-center ">
-	<form action="http://localhost:8080/market-book/SearchBook"method="POST">
+	<form action="http://localhost:8080/market-book/SearchBook"method="GET">
 		 <h2>Select book</h2>
 		<input type="number" name="id"
 			placeholder="Enter the book id...." autofocus="autofocus"> 

@@ -10,6 +10,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import dao.BasketInterfaceDAO;
 import factories.BasketFactory;
 import model.Book;
@@ -34,16 +36,18 @@ public class ShowBookOnBasket extends HttpServlet {
 			HttpServletRequest request, 
 			HttpServletResponse response) 
 	throws ServletException, IOException {
+		HttpSession session = request.getSession(true);
+		var emailSession = (String) session.getAttribute("email");
+		
 		BasketInterfaceDAO bi = BasketFactory.getBasketQueryDAO();
 		BasketServiceInterface bsi = BasketFactory.getBasketServiceIMplementation(bi);
-		List<Book> basket = bsi.showBookOnBasket();
+		List<Book> basket = bsi.showBookOnBasket(emailSession);
 		
-		String basketTotal = bsi.showTotalCost();
-		if(basketTotal==null)basketTotal="0";
+		
 		
 		RequestDispatcher view = null;
-  request.setAttribute("basket", basket);
-  request.setAttribute("basketTotal", basketTotal);
+  request.setAttribute("basket",basket);
+  
   view = request.getRequestDispatcher("Basket.jsp");
   view.include(request, response); 
 	}

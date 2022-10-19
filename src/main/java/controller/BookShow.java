@@ -38,6 +38,7 @@ public class BookShow extends HttpServlet {
       RequestDispatcher view = null;
       request.setAttribute("res",list);
       
+      
       view = request.getRequestDispatcher("bookList.jsp");
       view.include(request, response);    
   }

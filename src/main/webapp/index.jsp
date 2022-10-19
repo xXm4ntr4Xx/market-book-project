@@ -64,7 +64,7 @@
 <br>
 <br>
 <div class="flex justify-center ">
- <form action="SearchBook.jsp" method="GET">
+ <form action="http://localhost:8080/market-book/SearchBook.jsp" method="GET">
   <input type="submit" value="Search Book" autofocus="autofocus"class="flex justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"/> 
  </form>
 </div>
