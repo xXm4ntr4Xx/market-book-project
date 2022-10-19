@@ -5,12 +5,11 @@ import java.util.ArrayList;
 
 import model.Book;
 
-public interface BasketInterfaceDAO {
-	public ArrayList<Book> searchBooksAndInsertOnBasket(String num);
-	public ArrayList<Book> searchBooksAndDeleteFromBasket(String num);
-	public ArrayList<Book> showBookOnBasket();
-	public String showTotalCost();
+public interface BasketInterfaceDAO{
+
+	ArrayList<Book> showBookOnBasket();
+	ArrayList<Book> searchBooksAndInsertOnBasket(String id);
+	ArrayList<Book> searchBooksAndDeleteFromBasket(String num);
+	String showTotalCost();
 	
-
-
 }

@@ -1,7 +1,8 @@
 package controller;
 
 import java.io.IOException;
-import java.util.List;
+import java.util.ArrayList;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -34,27 +35,36 @@ protected void doPost(
 		HttpServletRequest request,
 		HttpServletResponse response) 
 throws ServletException, IOException {
-	
+	ArrayList<Book> basket;
+	HttpSession session = request.getSession(true);
+	var emailSession = (String) session.getAttribute("email");
 	
 	var id = request.getParameter("id");
 	BasketInterfaceDAO bi = BasketFactory.getBasketQueryDAO(); 
 	BasketServiceInterface bsi = BasketFactory.getBasketServiceIMplementation(bi);
-	List<Book> basket= null ;
+	
+
 	
 	RequestDispatcher view = null;
 	
 	
-	HttpSession session = request.getSession(true);
-	String emailSession = (String) session.getAttribute("email");
-	System.out.println(emailSession);
-	basket = bsi.searchBooksAndInsertOnBasket(id);
-
 	
- request.setAttribute("basket",basket);
- view = request.getRequestDispatcher("BookShow?");
- view.include(request, response); 
- response.sendRedirect("BookShow?");
+	if(emailSession==null) {
+		//redirect to login if email is null
+		response.sendRedirect("http://localhost:8080/market-book/Login.jsp");
+		}else {
+			basket = bsi.searchBooksAndInsertOnBasket(id);	
+			
+			
+			System.out.println(basket + "   "+ emailSession);
+ 		request.setAttribute("basket",basket);
+ 		view = request.getRequestDispatcher("BookShow?");
+ 		view.include(request, response); 
+ 		response.sendRedirect("BookShow?");
  
+		}
+	
+
 	}
 
 }

@@ -45,7 +45,6 @@ public class UpdateUser extends HttpServlet {
 		
 		UserInterfaceDAO uDao = new UserQueryDAO();
 		UserServiceInterface usi = new UserServiceImplemantation(uDao);
-//		var status = usi.checkUser(email,password);
 
 	var status = 	usi.updateUser(email,password,newName,newSurname,newEmail,newPassword);
 if(status == "success") {

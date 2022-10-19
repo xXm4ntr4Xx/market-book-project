@@ -15,13 +15,14 @@
 	body{
 	background-image: url("https://cdn5.vectorstock.com/i/1000x1000/83/84/hand-drawn-book-retro-sketch-engraving-monochrome-vector-26628384.jpg");
 	}
+	
 	</style>
 <title>Main Page</title>
 </head>
 <body>
 <%String email = (String)session.getAttribute("email"); %>
 	<!--  -->
-<nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
+<nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 navigationBar">
  <div class="container flex flex-wrap justify-between items-center mx-auto">
   <a href="index.jsp" class="flex">
    <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white">TheBook Store</span>

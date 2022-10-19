@@ -2,8 +2,10 @@ package controller;
 
 import dao.UserInterfaceDAO;
 import factories.UserFactory;
+import model.Book;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -43,10 +45,10 @@ public class UserLogin extends HttpServlet {
 
         System.out.println("here  " + status);
         if (status.equals("success")) {
-         RequestDispatcher view = null;
-         request.setAttribute("res", email);
+         RequestDispatcher view = null;        
          HttpSession session = request.getSession(true);
          session.setAttribute("email", email);
+         session.setAttribute("res", email);
        	 view = request.getRequestDispatcher("index.jsp");
        	 view.include(request, response);	
             response.sendRedirect("index.jsp");

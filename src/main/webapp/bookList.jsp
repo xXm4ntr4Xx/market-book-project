@@ -129,47 +129,5 @@
 	</form>
 	</div> 
 	
-
-<%-- <!-- //basket -->
-	<table border="1"
-		class="table-auto border-separate border-spacing-2 border border-slate-500">
-		<tr>
-		<th class="border border-slate-600">Book id</th>
-			<th class="border border-slate-600">Book title</th>
-			<th class="border border-slate-600">Book cost</th>
-			<th class="border border-slate-600">Delete</th>
-			<th class="border border-slate-600">Number of Books</th>
-		</tr>
-		<tr>
-			<c:forEach items="${basket}" var="book">
-				<tr>
-					<td class="border border-slate-700">
-					<c:out value="${book.bookId}" />
-					</td>
-					<td class="border border-slate-700">
-					<c:out value="${book.bookTitle}" />
-					</td>
-					<td class="border border-slate-700">
-					<c:out value="${book.bookCost}" />
-					</td>
-					<td class="border border-slate-700">
-					<form action="http://localhost:8080/market-book/DeleteFromBasket"
-						method="POST">
-						<input type="text" value="${book.bookId}" name="id" hidden="" />
-						<input type="submit" value="-" 
-							class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"/>
-					</form>
-				</td>
-			 	<td class="border border-slate-700">
-				</td> 
-					
-				<tr>
-			</c:forEach>			
-	</table>
-	
-	<!--show book  -->
-	<form action="http://localhost:8080/market-book/ShowBookOnBasket" method="GET">
-	<input type="submit" value="Show Books"/>
-	</form> --%>
 </body>
 </html>

@@ -16,14 +16,10 @@ BasketInterfaceDAO basketDao;
 	@Override
 	public ArrayList<Book> searchBooksAndInsertOnBasket(String id) {
 		// TODO Auto-generated method stub
-		return this.basketDao.searchBooksAndInsertOnBasket(id);
+		return basketDao.searchBooksAndInsertOnBasket(id);
 	}
 
-	@Override
-	public ArrayList<Book> showBookOnBasket() {
-		// TODO Auto-generated method stub
-		return this.basketDao.showBookOnBasket();
-	}
+	
 
 	@Override
 	public ArrayList<Book> searchBooksAndDeleteFromBasket(String id) {
@@ -36,4 +32,12 @@ BasketInterfaceDAO basketDao;
 		// TODO Auto-generated method stub
 		return this.basketDao.showTotalCost();
 	}
+
+	@Override
+	public ArrayList<Book> showBookOnBasket() {
+		// TODO Auto-generated method stub
+		return basketDao.showBookOnBasket();
+	}
+
+	
 }

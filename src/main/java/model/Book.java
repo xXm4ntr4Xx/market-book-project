@@ -1,12 +1,11 @@
 package model;
 
 public class Book {
-	Integer bookId;
-	String bookGenre;
-	String bookTitle;
-	String bookAuthor;
-	Integer bookYear;
-	Double bookCost;
+	private Integer bookId;
+	private String bookTitle;
+	private String bookAuthor; 	
+	private Integer bookYear;
+	private Double bookCost;
 	
 	//Constructor
 	
