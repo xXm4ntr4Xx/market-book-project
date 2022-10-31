@@ -2,10 +2,8 @@ package controller;
 
 import dao.UserInterfaceDAO;
 import factories.UserFactory;
-import model.Book;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

@@ -15,7 +15,6 @@ public class BasketQueryDAO implements BasketInterfaceDAO{
  private PreparedStatement pst;
  private ResultSet res;
  
- 
  ArrayList<Book> list = new ArrayList<>();
  
 	public ArrayList<Book> searchBooksAndInsertOnBasket(String id,String email){
@@ -62,7 +61,6 @@ e.printStackTrace();
 		return list;
 	}
 	
-
 	@Override
 	public ArrayList<Book> searchBooksAndDeleteFromBasket(String id,String email) {
 		con = SingletonConnection.getConnection();
@@ -103,7 +101,6 @@ e.printStackTrace();
 	}
 //show total amount of basket
 	
-
 @Override
 public ArrayList<Book> showBookOnBasket(String email) {
 	con = SingletonConnection.getConnection();
