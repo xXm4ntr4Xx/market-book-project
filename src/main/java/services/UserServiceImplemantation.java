@@ -15,9 +15,6 @@ public class UserServiceImplemantation implements UserServiceInterface{
 	}
 
 	
-	
-	
-	
 	@Override
 	public User registerUser(User user) {
 		/* Plain-text password initialisation. */  
@@ -149,7 +146,4 @@ catch (NoSuchAlgorithmException e)
 }
 		return null;
 	}
-
-	
-
 }
