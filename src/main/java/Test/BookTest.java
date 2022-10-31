@@ -27,7 +27,7 @@ class BookTest {
 	void checkUser() {
 		Book b1 = new Book("The new Book","Steven Lee",2004,33.50);
 		String expectedResult = "Steven Lee";
-		String actual = b1.getBookAuthor();
-		Assert.assertEquals(expectedResult,actual);
+		String actualValue = b1.getBookAuthor();
+		Assert.assertEquals(expectedResult,actualValue);
 	}
 }
