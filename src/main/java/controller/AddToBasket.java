@@ -43,10 +43,7 @@ throws ServletException, IOException {
 	BasketInterfaceDAO bi = BasketFactory.getBasketQueryDAO(); 
 	BasketServiceInterface bsi = BasketFactory.getBasketServiceIMplementation(bi);
 	
-
-	
 	RequestDispatcher view = null;
-	
 	
 	
 	if(emailSession==null) {
