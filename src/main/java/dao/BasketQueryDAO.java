@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 
 import model.Book;
-import model.User;
 import utilities.SingletonConnection;
 
 public class BasketQueryDAO implements BasketInterfaceDAO{

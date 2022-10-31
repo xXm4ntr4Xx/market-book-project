@@ -47,7 +47,6 @@ public class DeleteFromBasket extends HttpServlet {
 		BasketServiceInterface bsi = BasketFactory.getBasketServiceIMplementation(bi);
 		List<Book> basket = bsi.searchBooksAndDeleteFromBasket(id,emailSession);
 		
-		
 		RequestDispatcher view = null;
 	 request.setAttribute("basket", basket);
 	 view = request.getRequestDispatcher("Basket.jsp");
