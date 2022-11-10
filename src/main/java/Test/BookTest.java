@@ -20,7 +20,7 @@ class BookTest {
 	void test() {
 		fail("Not yet implemented");
 	}
-
+	//this is a jenkins test
 	//String bookTitle, String bookAuthor, Integer bookYear, Double bookCost
 	@Test
 	@DisplayName("check book author")
